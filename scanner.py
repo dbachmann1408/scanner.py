@@ -1,5 +1,8 @@
+"""
+Python Port Scanner 2.0
+"""
 import socket # import the socket library
-import sys    ### import the sys library for System-specific parameters and functions ###
+import sys    # import the sys library for System-specific parameters and functions ###
 
 def open_ports(host,port): #Return Boolean
     try:    # try connecting to host at port and if successful return true if false got to except
