@@ -22,5 +22,7 @@ list_of_ports = [20, 21, 22, 23, 25, 53, 68, 69, 80, 110, 115,
                  194, 311, 443, 445, 660, 993, 1023]  # list which holds the ports that are going to be scanned
 
 for ports in list_of_ports:  # for loop which cycles through the ports
-    if open_ports(sys.argv[1], ports):
-        print("{} is OPEN!".format(ports))  # prints the open ports to the console
+    if open_ports(sys.argv[0], ports):
+        print("Port {} is OPEN!".format(ports))  # prints the open ports to the console
+    else:
+        print("Port {} is not opened".format(ports))
