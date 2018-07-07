@@ -26,7 +26,7 @@ LIST_OF_PORTS = [20, 21, 22, 23, 25, 53, 68, 69, 80, 110, 115,
                  311, 443, 445, 660, 993, 1023]
 
 for ports in LIST_OF_PORTS:  # for loop which cycles through the ports
-    if open_ports(sys.argv[0], ports):
-        print("Port {} is OPEN!".format(ports))  # prints the open ports to the console
+    if open_ports(socket.gethostbyname(socket.gethostname()), ports):
+        print(socket.gethostbyname(socket.gethostname()) + ": Port {} is OPEN!".format(ports))  # prints the open ports to the console
     else:
-        print("Port {} is not opened".format(ports))
+        print(socket.gethostbyname(socket.gethostname()) + ": Port {} is not opened".format(ports))
